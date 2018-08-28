@@ -288,6 +288,8 @@ function _civicrm_og_sync_group_action($membership, $op = 'add') {
     'uf_id' => $membership->etid,
     'is_active' => 1,
     'is_admin' => 0,
+    // Whether to automatically subscribe the member to notifications.
+    'notifications_subscribe' => variable_get('civicrm_og_sync_notifications_subscribe', TRUE),
   );
 
   // add contact in group
